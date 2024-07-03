@@ -14,7 +14,7 @@ class Post(Base):
     created_at =Column(TIMESTAMP(timezone = True), nullable = False, server_default=text('now()'))
     owner_id = Column(Integer, ForeignKey("users.id",ondelete="CASCADE"), nullable=False)
 
-    #squalchemy can fetch teh data for this relation using the call objct  User  _> below 
+    # some random notes! squalchemy can fetch teh data for this relation using the call objct  User  _> below 
 
     owner = relationship("User")
 
